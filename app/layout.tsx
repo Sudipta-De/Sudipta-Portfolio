@@ -25,13 +25,13 @@ export const metadata: Metadata = {
     "Web Developer",
     "Portfolio",
   ],
-  metadataBase: new URL("https://Sudipta-portfolio.netlify.app"),
+  metadataBase: new URL("https://Sudipta-portfolio-new.netlify.app"),
   openGraph: {
     title: "Sudipta De  | CSE (Data Science) Student",
     description:
       "Portfolio of Sudipta De featuring software development, web development, data science, and practical projects.",
     type: "website",
-    url: "https://Sudipta-portfolio.netlify.app/",
+    url: "https://Sudipta-portfolio-new.netlify.app/",
     images: [
       {
         url: "/og-image.png",
