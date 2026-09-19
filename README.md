@@ -13,7 +13,7 @@
 
 <!-- Social Links -->
 <p align="center">
-  <a href="YOUR_NETLIFY_PORTFOLIO_URL">
+  <a href="https://sudipta-portfolio-new.netlify.app/">
     <img src="https://img.shields.io/badge/Portfolio-%230A0F1E.svg?style=for-the-badge&logo=netlify&logoColor=white" alt="Portfolio" />
   </a>
   <a href="https://www.linkedin.com/in/sudipta-de-951baa425/">
