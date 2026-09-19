@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #1a1a2e;
+  --color-secondary-bg: #1a1a2e;
+  --color-primary-accent: #023e8a;
+  --color-secondary-accent: #00b4d8;
+  --color-text: #ffffff;
+  --color-muted-text: rgba(255, 255, 255, 0.6);
+
+  --shadow-neu-raised: 6px 6px 12px rgba(0,0,0,0.5), -6px -6px 12px rgba(255,255,255,0.05);
+  --shadow-neu-inset: inset 6px 6px 12px rgba(0,0,0,0.5), inset -6px -6px 12px rgba(255,255,255,0.05);
+  --shadow-neu-sm: 4px 4px 8px rgba(0,0,0,0.4), -4px -4px 8px rgba(255,255,255,0.04);
+  --shadow-neu-glow: 0 0 12px rgba(2,62,138,0.4);
+}
+
+:root {
+  --background: #1a1a2e;
+  --foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Card Style */
+.glass-card {
+  background: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 245, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-card-glow:hover {
+  border-color: rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+}
+
+.glass-card-glow-violet:hover {
+  border-color: rgba(0, 245, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.2);
+}
+
+/* Glow Elements */
+.glow-spot-cyan {
+  background: radial-gradient(circle, rgba(0, 245, 255, 0.1) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+.glow-spot-violet {
+  background: radial-gradient(circle, rgba(0, 216, 240, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #023e8a;
+}
+
+/* Pulse Glow Keyframes */
+@keyframes subtle-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-glow {
+  animation: subtle-pulse 8s infinite ease-in-out;
+}
+
+/* Fluid Typography Utilities */
+.text-fluid-h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1.1;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.75rem, 3.5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.text-fluid-sub {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.4;
+}
+
+.text-fluid-body {
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  line-height: 1.6;
+}
+
+/* Hide scrollbar utility for touch scroll container */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* --- Dark Techy Visual Theme Utilities --- */
+
+/* Scanline Overlay Effect for Hero Section */
+.scanlines {
+  position: relative;
+  overflow: hidden;
+}
+.scanlines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 245, 255, 0.015) 0px,
+    rgba(0, 245, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Heading Typography spacing */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0.05em;
+}
+
+/* Monospace font utility class */
+.font-mono-custom {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Reusable Project Card */
+.project-card {
+  background-color: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  box-shadow: var(--shadow-neu-raised) !important;
+  transition: all 0.3s ease;
+}
+.project-card:hover {
+  border-color: rgba(2, 62, 138, 0.2) !important;
+  box-shadow: var(--shadow-neu-glow), var(--shadow-neu-raised) !important;
+}
+
+/* Reusable Skill Tag */
+.skill-tag {
+  background-color: #1a1a2e !important;
+  border: 1px solid rgba(255, 255, 255, 0.03) !important;
+  box-shadow: var(--shadow-neu-sm) !important;
+  font-family: 'Courier New', Courier, monospace !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+}
+.skill-tag:hover {
+  color: #00b4d8 !important;
+  border-color: rgba(2, 62, 138, 0.4) !important;
+  box-shadow: var(--shadow-neu-glow), var(--shadow-neu-sm) !important;
+}
+
+/* Navigation Dark Glass Effect */
+.nav-glass {
+  background: rgba(26, 26, 46, 0.8) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+/* Thin Cyan Gradient Divider lines */
+.border-cyan-gradient-t {
+  border-top: 1px solid transparent !important;
+  border-image: linear-gradient(to right, transparent, rgba(2, 62, 138, 0.4), transparent) 1 !important;
+}
+.border-cyan-gradient-b {
+  border-bottom: 1px solid transparent !important;
+  border-image: linear-gradient(to right, transparent, rgba(2, 62, 138, 0.4), transparent) 1 !important;
+}
+
+/* Primary Button CTA */
+.btn-primary-custom {
+  background-color: #023e8a !important;
+  color: #ffffff !important;
+  box-shadow: var(--shadow-neu-sm) !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+.btn-primary-custom:hover {
+  box-shadow: var(--shadow-neu-inset), 0 0 10px rgba(2, 62, 138, 0.5) !important;
+}
+
+/* Secondary Button Outlined */
+.btn-secondary-custom {
+  color: #00b4d8 !important;
+  background: transparent !important;
+  border: 1px solid #023e8a !important;
+  box-shadow: var(--shadow-neu-sm) !important;
+  transition: all 0.3s ease !important;
+}
+.btn-secondary-custom:hover {
+  box-shadow: var(--shadow-neu-inset) !important;
+  background-color: rgba(2, 62, 138, 0.1) !important;
+}
+
+/* Orbiting Badges Around Profile Picture */
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-rotate-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.orbit-spin {
+  animation: orbit-rotate 25s linear infinite;
+}
+
+.orbit-spin-reverse {
+  animation: orbit-rotate-reverse 25s linear infinite;
+}
+
+.orbit-container:hover .orbit-spin,
+.orbit-container:hover .orbit-spin-reverse {
+  animation-play-state: paused;
+}
+
