@@ -9,23 +9,26 @@ type Project = {
   category: string;
   problemStatement: string;
   github: string;
-  demo: string;
 };
 
 const PROJECTS_DATA: Project[] = [
+  {
+  title: "Course Registration System",
+  category: "Java · Desktop Application",
+  problemStatement: "A Java-based course registration system for managing course enrollment and registration requests.",
+  github: "https://github.com/Sudipta-De/Course-Registration-System",
+  },
   {
     title: "Visualization of Sorting Algorithms",
     category: "Web Development · Algorithm Visualization",
     problemStatement: "An interactive visual representation of sorting algorithms that makes their working easier to understand.",
     github: "https://github.com/Sudipta-De/Sorting-algorithms",
-    demo: "https://sorting-alg0.netlify.app/",
   },
   {
     title: "Currency Converter",
     category: "Java · Desktop Application",
     problemStatement: "A Java Swing desktop application for converting values between different currencies.",
     github: "https://github.com/Sudipta-De/Corrency-Converter",
-    demo: "#",
   },
 ];
 
@@ -94,13 +97,6 @@ export default function Projects() {
                   >
                     <Github className="h-3.5 w-3.5" />
                     <span>GitHub</span>
-                  </a>
-                  <a
-                    href={project.demo}
-                    className="flex-1 flex items-center justify-center gap-1.5 rounded-full btn-primary-custom py-2.5 text-xs font-bold min-h-[40px] font-mono-custom"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    <span>Live Demo</span>
                   </a>
                 </div>
               </NeuCard>

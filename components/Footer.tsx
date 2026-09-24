@@ -15,9 +15,6 @@ export default function Footer() {
           <p className="text-text/90 font-medium text-sm">
             &copy; {year} <span className="bg-gradient-to-r from-primary-accent to-secondary-accent bg-clip-text text-transparent font-bold">Sudipta De </span>. All rights reserved.
           </p>
-          <p className="text-[10px] text-muted-text/80 font-mono-custom">
-            B.Tech CSE (Data Science) | Software Development & Problem Solving
-          </p>
         </div>
 
         {/* Social Link circles (Neumorphic raised -> inset) */}
