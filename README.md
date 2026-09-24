@@ -102,6 +102,7 @@ Hi there! I'm **Sudipta De**, a **B.Tech Computer Science Engineering student sp
 | :--- | :--- | :--- | :--- |
 | **Sorting Algorithms Visualizer** | Interactive visualization of sorting algorithms designed to make their working easier to understand. | `JavaScript`, `React`, `Vite` | [🔗 Live Demo](https://sorting-alg0.netlify.app/) |
 | **Currency Converter** | Desktop GUI application for converting values between different currencies. | `Java`, `Java Swing` | [🔗 Repository](#) |
+| **Course Registration System** | Desktop GUI application for managing course enrollment and registration requests. | `Java`, `Java Swing` | [🔗 Repository](#) |
 
 <br>
 
